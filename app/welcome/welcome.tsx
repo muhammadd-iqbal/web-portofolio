@@ -58,6 +58,7 @@ export function Welcome() {
     "PHP",
     "Redis",
     "Bootstrap",
+    "Material UI",
   ];
 
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
