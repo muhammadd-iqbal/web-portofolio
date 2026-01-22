@@ -136,6 +136,39 @@ export function Welcome() {
       },
       link: "https://sipde.jatimprov.go.id/",
     },
+    {
+      category: "Fullstack",
+      title: "E-Data",
+      description: `E-Data is a centralized web-based platform designed to consolidate investment data, 
+      infrastructure projects, and corporate permits across East Java. It serves as a sophisticated data 
+      visualization tool to track and analyze the regional investment landscape.`,
+      technologies: [
+        "Symfony",
+        "Bootstrap",
+        "tailwind CSS",
+        "JQuery",
+        "Postgresql",
+        "NGINX",
+      ],
+      details: {
+        overview: `As a Fullstack Developer for E-Data, I led the end-to-end development of a centralized 
+        investment visualization platform. I was responsible for the entire lifecycle, from translating client 
+        requirements into technical specifications to production deployment. Key contributions include the 
+        development of geospatial dashboards for regional investment tracking and the engineering of a custom 
+        pivot table system, enabling users to generate dynamic, multi-dimensional reports directly from the
+         database for advanced business intelligence.`,
+        responsibilities: [
+          "Managed the end-to-end development lifecycle, from initial client requirement gatherings and feature discovery to final deployment on production servers.",
+          "Developed an interactive data visualization dashboard featuring dynamic charts and geospatial mapping to track investment distributions across East Java provinces.",
+          "Engineered comprehensive investment analytics, providing visual reports categorized by business sectors and country of origin through integrated charts and regional maps.",
+          "Built a custom Pivot Table engine that allows users to perform ad-hoc reporting by dynamically manipulating database fields into custom headers and rows for complex data analysis.",
+          "Ensured seamless data processing and high performance when rendering large datasets for real-time visual insights.",
+        ],
+        challenges:
+          "The main challenge was creating a smooth, responsive chat interface that could handle real-time updates while maintaining good performance. Solved this by implementing efficient state management and lazy loading for chat history.",
+      },
+      link: "https://e-data.appdev.web.id/",
+    },
   ];
 
   const toggleExpand = (index: number) => {
@@ -348,7 +381,7 @@ export function Welcome() {
                 <div className="flex items-start justify-between flex-wrap gap-2">
                   <div>
                     <CardTitle className="text-2xl mb-1">
-                      Mobile App Devloper Intern
+                      Mobile App Developer Intern
                     </CardTitle>
                     <CardDescription className="text-base font-semibold text-blue-600">
                       PT Andromedia
