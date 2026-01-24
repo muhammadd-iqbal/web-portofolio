@@ -18,6 +18,7 @@ import {
   CardTitle,
 } from "~/components/ui/card";
 import { Badge } from "~/components/ui/badge";
+import { projects, technologies } from "~/data/data";
 
 export function Welcome() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,149 +28,7 @@ export function Welcome() {
     setMobileMenuOpen(false);
   };
 
-  const experiences = [
-    {
-      role: "Full Stack Developer",
-      company: "Tech Company",
-      period: "2022 - Sekarang",
-      description:
-        "Mengembangkan aplikasi web modern dengan fokus pada performa dan user experience",
-    },
-    {
-      role: "Frontend Developer",
-      company: "Startup Digital",
-      period: "2020 - 2022",
-      description:
-        "Membangun interface yang responsive dan interaktif untuk berbagai platform",
-    },
-  ];
-
-  const technologies = [
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Tailwind CSS",
-    "PostgreSQL",
-    "Git",
-    "Docker",
-    "Firebase",
-    "Go",
-    "Symfony",
-    "PHP",
-    "Redis",
-    "Bootstrap",
-    "Material UI",
-  ];
-
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
-
-  const projects = [
-    {
-      category: "Fullstack",
-      title: "Satukerja",
-      description: `Satukerja is a comprehensive web and Android-based job portal platform designed to streamline 
-        the recruitment process and connect job seekers with career opportunities.`,
-      technologies: [
-        "Nextjs",
-        "Material UI",
-        "REST API",
-        "GO",
-        "Postgresql",
-        "Redis",
-        "Firebase",
-        "Midtrans | Payment Gateway",
-        "Docker",
-        "NGINX",
-      ],
-      details: {
-        overview: `As a Fullstack Developer for Satukerja, I led the end-to-end development life cycle, 
-          from bridging client requirements with UI/UX design to executing full-scale technical implementation.
-           I engineered a high-performance ecosystem using Next.js and Material UI for the frontend, 
-           coupled with a robust Go-based backend integrated with PostgreSQL, Redis caching, and 
-           Firebase authentication. My role also encompassed the integration of Midtrans for secure payments 
-           and managing scalable deployments across dev and production environments using Docker c
-           ontainerization.`,
-        responsibilities: [
-          "Lead client coordination to define product requirements and roadmap, ensuring all developed features aligned with business objectives",
-          "Acted as a technical liaison between the client and the UI/UX design team to ensure seamless design implementation across web and mobile platforms",
-          "Developed a high-performance web interface using Next.js and Material UI (MUI), focusing on responsive design and optimal user experience",
-          "Engineered robust backend services using Go (Golang) and PostgreSQL, implementing Redis for high-performance caching and Firebase for secure user authentication and authorization",
-          "Integrated Midtrans payment gateway to facilitate seamless financial transactions for premium corporate features",
-          "Managed end-to-end DevOps processes, including containerization with Docker and deployment across development and production environments",
-        ],
-        challenges:
-          "The main challenge was creating a smooth, responsive chat interface that could handle real-time updates while maintaining good performance. Solved this by implementing efficient state management and lazy loading for chat history.",
-      },
-      link: "https://satukerja.id",
-    },
-    {
-      category: "Fullstack",
-      title: "Sipde",
-      description: `SIPDE is a web-based monitoring platform designed for the East Java Provincial Government 
-      to track the distribution and implementation of the People's Business Credit (KUR) fund. 
-      The system is integrated with two major regional banks in East Java responsible for fund disbursement.`,
-      technologies: [
-        "Symfony",
-        "Bootstrap",
-        "tailwind CSS",
-        "JQuery",
-        "Postgresql",
-        "Apache",
-      ],
-      details: {
-        overview: `As a Fullstack Developer for the SIPDE project, I played a pivotal role in developing a 
-        government-grade monitoring platform for the East Java Provincial Government to oversee the 
-        distribution of the People's Business Credit program. I was responsible for crafting a responsive 
-        and secure user interface using Tailwind CSS, while simultaneously engineering a sophisticated 
-        backend reporting engine. This system provides multi-dimensional data insights—ranging from 
-        institutional performance across bank branches to granular debtor-level tracking—enabling 
-        real-time monitoring of loan distributions, installment progress, and payment statuses through 
-        seamless integration with major regional banks.`,
-        responsibilities: [
-          "Developed the landing page and secure authentication modules using Tailwind CSS, ensuring a modern, responsive, and intuitive user interface.",
-          "Engineered a comprehensive reporting system by developing both the frontend components and robust backend logic to track credit distribution.",
-          "Developed data visualization and tracking metrics to monitor total loan amounts, outstanding balances, and real-time installment statuses.",
-          "Ensured data integrity and accuracy in displaying financial summaries, providing the government with clear insights into the credit program's performance.",
-        ],
-        challenges:
-          "The main challenge was creating a smooth, responsive chat interface that could handle real-time updates while maintaining good performance. Solved this by implementing efficient state management and lazy loading for chat history.",
-      },
-      link: "https://sipde.jatimprov.go.id/",
-    },
-    {
-      category: "Fullstack",
-      title: "E-Data",
-      description: `E-Data is a centralized web-based platform designed to consolidate investment data, 
-      infrastructure projects, and corporate permits across East Java. It serves as a sophisticated data 
-      visualization tool to track and analyze the regional investment landscape.`,
-      technologies: [
-        "Symfony",
-        "Bootstrap",
-        "tailwind CSS",
-        "JQuery",
-        "Postgresql",
-        "NGINX",
-      ],
-      details: {
-        overview: `As a Fullstack Developer for E-Data, I led the end-to-end development of a centralized 
-        investment visualization platform. I was responsible for the entire lifecycle, from translating client 
-        requirements into technical specifications to production deployment. Key contributions include the 
-        development of geospatial dashboards for regional investment tracking and the engineering of a custom 
-        pivot table system, enabling users to generate dynamic, multi-dimensional reports directly from the
-         database for advanced business intelligence.`,
-        responsibilities: [
-          "Managed the end-to-end development lifecycle, from initial client requirement gatherings and feature discovery to final deployment on production servers.",
-          "Developed an interactive data visualization dashboard featuring dynamic charts and geospatial mapping to track investment distributions across East Java provinces.",
-          "Engineered comprehensive investment analytics, providing visual reports categorized by business sectors and country of origin through integrated charts and regional maps.",
-          "Built a custom Pivot Table engine that allows users to perform ad-hoc reporting by dynamically manipulating database fields into custom headers and rows for complex data analysis.",
-          "Ensured seamless data processing and high performance when rendering large datasets for real-time visual insights.",
-        ],
-        challenges:
-          "The main challenge was creating a smooth, responsive chat interface that could handle real-time updates while maintaining good performance. Solved this by implementing efficient state management and lazy loading for chat history.",
-      },
-      link: "https://e-data.appdev.web.id/",
-    },
-  ];
 
   const toggleExpand = (index: number) => {
     setExpandedCard(expandedCard === index ? null : index);
